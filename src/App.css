@@ -1,12 +1,90 @@
 .App {
   text-align: center;
 }
-
+*{
+  margin: 0;
+  padding: 0;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
+.wrapper-form-main{
+   position: absolute;
+   left:0;
+   top:0;
+   width: 100vw;
+   height: 100vh;
+}
+.list-location{
+  display: flex;
+    justify-content: space-between;
+    background: #ededed;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 8px auto;
+    box-shadow: 0 1px 0 #bfbebe;
+    vertical-align: middle;
+    width: 98%;
+    align-items: center;
+  }
+.bg-form-wrapper{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100vw;
+  height: 100vh;
+  background: #0000004d;
+  z-index: 1;
+}
+.list-header{
+   display: flex;
+   justify-content: space-between;
+   background: #ededed;
+   color: rgb(39, 38, 38);
+   width: 98%;
+   margin: 10px auto;
+   padding: 10px;
+   border-radius: 5px;
+   box-shadow: 0 1px 0 #bfbebe;
+}
+.list-header > h3{
+    min-width: 100px;
+    text-align: left;
+}
+.MuiFormControl-marginNormal{
+  margin:0 !important;
+}
+.btn-box{
+   display: flex;
+   justify-content: flex-end;
+   margin-top:10px
+}
+.btn-box > button{
+  margin-right: 5px;
+  text-transform: capitalize;
+}
+.form-paper{
+  width:60%;
+  margin:5% auto;
+  padding:20px;
+  position: relative;
+  z-index: 9;
+}
+label{
+  text-align: left;
+  display: block;
+}
+.MuiGrid-item{
+  padding: 0 5px;
+  margin: 10px 0 !important;
+}
+input{
+  border: none;
+  border-bottom: 1px solid #282c34;
+  width: 100%;
+  outline: none;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -15,13 +93,12 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  min-height: 50px;
 }
 
 .App-link {
