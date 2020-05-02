@@ -46,7 +46,7 @@ function AddForm(props) {
          <Field
                   name="suite"
                   component={RenderField}
-                  type="text"
+                  type="number"
                   label="Suite No."
                   required
                 />

@@ -100,7 +100,9 @@ input{
   color: white;
   min-height: 50px;
 }
-
+span.MuiFormLabel-asterisk.MuiInputLabel-asterisk{
+  display: none !important;
+}
 .App-link {
   color: #61dafb;
 }
