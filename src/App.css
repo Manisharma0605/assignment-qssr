@@ -85,6 +85,24 @@ input{
   width: 100%;
   outline: none;
 }
+.listFacilities-wrapper{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9;
+}
+.listFacilities-wrapper ul{
+  background: white;
+    z-index: 9999;
+    position: absolute;
+    width: 60vw;
+    margin: 20vh 20vw;
+    list-style: none;
+    text-align: left;
+    padding: 20px 0
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

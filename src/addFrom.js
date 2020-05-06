@@ -1,19 +1,30 @@
-import React,{useEffect} from 'react';
+import React,{useState,useEffect} from 'react';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { Field, reduxForm } from 'redux-form';
 import RenderField from './RenderField';
+import RenderField1 from './RenderField1';
 import Button from '@material-ui/core/Button';
-import {closeFormAction, listArray} from './action';
+import {closeFormAction, listArray, facilityModalOpen} from './action';
 import { useDispatch, useSelector } from 'react-redux';
+import ListFacilities from './listFacilities';
 
 
 
 
-function AddForm(props) {
+function AddForm(props) { 
+var FacilityModal = useSelector( state => state.Facility.facilityModal)
+console.log('FacilityModal', FacilityModal)
     const dispatch = useDispatch();
     const { handleSubmit } = props;
-       
+
+    const funOpenModal = () =>{
+       dispatch(facilityModalOpen())
+    }
+   
+    var facVal = JSON.parse(localStorage.getItem('facilityValue'));
+     
+
     return (
         <div className='wrapper-form-main'>
         <div className='bg-form-wrapper' onClick={()=>dispatch(closeFormAction())}></div>
@@ -107,11 +118,13 @@ function AddForm(props) {
          </Grid>
          <Grid item sm={6}>
          <Field
-                  name="facility"
-                  component={RenderField}
+                  name="suite"
+                  component={RenderField1}
                   type="text"
-                  label="Facility Times"
+                  label="Facility Time"
                   required
+                  openWindow = {funOpenModal}
+                  valueFacility= {facVal || 'choose time'}
                 />
          </Grid>
          <Grid item sm={6}>
@@ -130,6 +143,7 @@ function AddForm(props) {
        </Grid> 
        </form>
        </Paper>
+       {FacilityModal && <ListFacilities/>}
        </div>
     )
 }

@@ -1,16 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore, combineReducers} from 'redux'
-import Todos from './reducer'
-import {reducer as formReducer} from 'redux-form'
+import { createStore} from 'redux'
+import RootReducer from './reducer/'
 // import thunk from 'redux-thunk';
 import App from '../src/App'
 
-const RootReducer = combineReducers({
-  Todos,
-  form: formReducer,
-})
+
 
 const store = createStore(
   RootReducer,

@@ -25,3 +25,11 @@ export const deleteAction = data => ({
 export const closeEditFormAction = () =>({
   type: 'CLOSE_EDIT_FORM'
 })
+
+export const facilityModalOpen = () =>({
+   type:'FACILITY_MODAL_OPEN'
+})
+
+export const facilityModalClose = () =>({
+  type:'FACILITY_MODAL_CLOSE'
+})
